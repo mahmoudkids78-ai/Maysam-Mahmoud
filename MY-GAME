@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Catch the Box Game</title>
+</head>
+<body>
+  <h1>Catch the Box Game</h1>
+  <canvas id="myCanvas" width="400" height="300"></canvas>
+
+  <script>
+  const canvas = document.getElementById("myCanvas");
+  const ctx = canvas.getContext("2d");
+
+  let x = 0;
+
+  function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.fillRect(x, 100, 50, 50);
+    x++;
+
+    requestAnimationFrame(animate);
+  }
+
+  animate();
+  </script>
+</body>
+</html>
